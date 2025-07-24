@@ -8,8 +8,8 @@
   /* vw 는 브라우저의 크기 라고 생각하면 되고  기본이 100이다.*/
   width: 300vw;
   display: flex;
-
   transition: all 1s;
+  margin-top: 100px;
 }
 
 .slide > img{
@@ -21,4 +21,6 @@
   width: 800px;
   overflow: hidden;
   margin: auto;
+  justify-content: space-between;
 }
+

@@ -1,0 +1,43 @@
+.My {
+  margin-top: 100px;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.My .left-menu {
+  width: 40%;
+  height: 1000px;
+  padding: 10px;
+  margin: 5px;
+  background-color: whitesmoke;
+  display: flex;
+}
+.left-menu .info {
+  display: flex;
+  justify-content: space-between
+}
+
+.My .right-menu {
+  width: 60%;
+  height: 100px;
+  padding: 5px;
+  margin: 5px;
+  background-color: whitesmoke;
+}
+
+.My .left-menu .manner, .level {
+  width: 48%;
+  height: 100px;
+  background-color: lightgray;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.My .levelguide {
+  padding: 5px;
+  margin-top: 20px;
+}
