@@ -4,13 +4,12 @@ import TabContent from "../component/TabContent";
 import { useState } from "react";
 
 
-function Detail ({soccerField}) {
+function Detail ({soccerField, selectedSoccerField ,setSelectdeSoccerField}) {
 const{id} = useParams();
 
 const selectedField = soccerField[id];
 const [like, setLike] = useState(0);
 const [tabNumber, setTabNumber] = useState(0);
-
 
 
   if(!selectedField) {
@@ -47,8 +46,28 @@ const [tabNumber, setTabNumber] = useState(0);
             <p>{'주소 : '+soccerField[id].address}</p>
             <p>{'가격: '+soccerField[id].price+'원'}</p>
         </div>
+          <p>이용 가능한 시간</p>
+          <div className="apply-time">
+            <div className="disabled">08:00~10:00</div>
+            <div className="disabled">10:00~12:00</div>
+            <div className="disabled">12:00~14:00</div>
+            <div className="disabled">14:00~16:00</div>
+            <div className="disabled">16:00~18:00</div>
+            <div className="disabled">18:00~20:00</div>
+            <div className="abled" onClick={()=>{
+            }}>20:00~22:00</div>
+            <div className="disabled">22:00~24:00</div>
+          </div>
         <div className="btn-wrapper">
-          <button className="btn1" onClick={()=>{alert('신청 완료했습니다.')}}>신청하기</button>
+          {/* 클릭시 축구장 이름 저장 */}
+          <button className="btn1" onClick={()=>{
+            let _selectedSoccerField = [...selectedSoccerField]
+            _selectedSoccerField.push({
+              soccerField : soccerField[id].name
+            })
+            setSelectdeSoccerField(_selectedSoccerField);
+            alert('신청 완료했습니다.')
+            }}>신청하기</button>
           <button className="btn2" onClick={()=>{
             setLike(like+1);
           }}>❤</button> {like}

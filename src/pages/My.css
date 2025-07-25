@@ -9,24 +9,19 @@
 
 .My .left-menu {
   width: 40%;
-  height: 1000px;
+  height: 100%;
   padding: 10px;
   margin: 5px;
   background-color: whitesmoke;
   display: flex;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px lightgray;
 }
 .left-menu .info {
   display: flex;
   justify-content: space-between
 }
 
-.My .right-menu {
-  width: 60%;
-  height: 100px;
-  padding: 5px;
-  margin: 5px;
-  background-color: whitesmoke;
-}
 
 .My .left-menu .manner, .level {
   width: 48%;
@@ -37,7 +32,46 @@
   font-size: 20px;
 }
 
-.My .levelguide {
+.My .levelguide >h4 {
   padding: 5px;
   margin-top: 20px;
+  text-align: center;
+}
+
+.My .levelguide .tabs .tab {
+  padding: 5px;
+  margin: 10px;
+}
+
+.My .levelcontent {
+  padding: 5px;
+  margin: 10px;
+}
+
+.match-list {
+  width: 60%;
+}
+
+.apply-match {
+  padding: 5px;
+  margin: 5px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px lightgray;
+}
+
+.guestapply-match {
+  padding: 5px;
+  margin: 5px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px lightgray;
+}
+
+.apply-match > h5,.apply-match > p {
+  margin: 10px;
+}
+
+.guestapply-match > h5,.guestapply-match > p {
+  margin: 10px;
 }

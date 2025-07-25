@@ -12,19 +12,20 @@ import My from './pages/My'
 function App() {
   const [soccerField, setSoccerField] = useState(data);
   const [guestInvite, setGuestInvite] = useState([]);
-
-
+  const [selectedSoccerField, setSelectdeSoccerField] = useState([]);
+  console.log(selectedSoccerField)
   return (
     <div>
       <Header />
       <Routes>
         <Route path='/' element = {<MainPage soccerField={soccerField}/>}/>
-        <Route path='/detail/:id' element={<Detail soccerField={soccerField}/>}/>
+        <Route path='/detail/:id' element={<Detail soccerField={soccerField} setSelectdeSoccerField={setSelectdeSoccerField} selectedSoccerField={selectedSoccerField}/>}/>
         <Route path='/invite' element={<Invite guestInvite={guestInvite} setGuestInvite={setGuestInvite}/>} />
         <Route path='/guest' element={<Guest guestInvite={guestInvite}/>}/>
-        <Route path='/my' element={<My />}/>
+        <Route path='/my' element={<My selectedSoccerField={selectedSoccerField}/>}/>
       </Routes>
     </div>
+    
   )
 }
 

@@ -14,8 +14,10 @@
   padding: 15px;
   width: 40%;
   margin-top: 10px;
-  height: 400px;
-  line-height: 60px;
+  height: 100%;
+  line-height: 40px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px lightgray;
 }
 .left-menu {
   background-color: whitesmoke;
@@ -25,6 +27,8 @@
   margin-left: -1px;
   padding: 5px;
   flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px lightgray;
 }
 
 .left-menu .tabs {
@@ -58,7 +62,7 @@ padding: 5px;
   padding: 5px;
   width: 120px;
   font-size: 20px;
-  margin-top: 25%;
+  margin-top: 30%;
 }
 .btn2{
   background-color: whitesmoke;
@@ -73,4 +77,23 @@ padding: 5px;
   padding: 5px;
   width: 60px;
   font-size: 16px;
+}
+
+.apply-time {
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);  */
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  gap: 5px;
+  text-align: center;
+}
+
+.disabled {
+  color: gray;
+  cursor: not-allowed;
+}
+
+.abled {
+  font-weight: bold;
+  cursor: pointer;
 }

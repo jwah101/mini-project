@@ -5,7 +5,7 @@ function Guest ({guestInvite}) {
 
   
   return(
-    <Table style={{marginTop:'60px'}}>
+    <Table style={{textAlign:'center' , marginTop:'60px'}}>
       <thead>
         <tr>
           <th>팀 이름</th>
@@ -16,9 +16,10 @@ function Guest ({guestInvite}) {
         </tr>
       </thead>
       <tbody>
-        {guestInvite.map((data,i)=>{
-          return(
-            <tr key={i}>
+        {guestInvite.length > 0 ? (
+           guestInvite.map((data,i)=>{
+             return(
+              <tr key={i}>
               <td>{data.teamName}</td>
               <td>{data.fieldName}</td>
               <td>{data.peopleCount}</td>
@@ -26,9 +27,18 @@ function Guest ({guestInvite}) {
               <td><button className="btn3" onClick={()=>{
                 alert('신청 완료했습니다.')
               }}>신청</button></td>
-            </tr>
-              )
-        })}
+              </tr>
+                )
+              })
+
+         ) :
+        (
+          <tr>
+            <td colSpan="5" style={{ textAlign: 'center' }}>
+              현재 등록된 경기가 없습니다.
+            </td>
+          </tr>
+         )}
       </tbody>
     </Table>
   )
