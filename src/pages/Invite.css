@@ -1,6 +1,7 @@
 
 .Invite{
-  width: 500px;
+  max-width: 400px;
+  width: 100%;
   margin: auto;
   display: flex;
   justify-content: center;

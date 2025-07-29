@@ -13,6 +13,7 @@ import Policy from './pages/Policy'
 import Footer from './component/Footer'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import Introduce from './pages/Introduce'
 
 function App() {
   const [soccerField, setSoccerField] = useState(data);
@@ -21,11 +22,9 @@ function App() {
   const [selectedGuest, setSelectedGuest] = useState([]);
     // 시간 선택시 변동 스테이트
   const [selectedSlot, setSelectedSlot] = useState([]);
-
-  console.log(selectedSlot)
   return (
     <div className='App'>
-      <Header />
+      <Header soccerField={soccerField} />
       <div className='MainContent'>
         <Routes>
           <Route path='/' element = {<MainPage soccerField={soccerField}/>}/>
@@ -37,6 +36,7 @@ function App() {
           <Route path='/register' element={<Register />}/>
           <Route path='/policy' element={<Policy/>}/>
           <Route path='/privacy' element={<Privacy/>}/>
+          <Route path='/introduce' element={<Introduce />}/>
         </Routes>
       </div>
       <Footer />
