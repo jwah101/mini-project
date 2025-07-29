@@ -18,7 +18,7 @@ function MainPage ({soccerField}) {
            }
          </div>
      </div>
-    
+
     </>
 
   )

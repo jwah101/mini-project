@@ -1,10 +1,12 @@
 .My {
   margin-top: 100px;
-  width: 1000px;
+  max-width : 1000px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .My .left-menu {
@@ -50,6 +52,8 @@
 
 .match-list {
   width: 60%;
+  display: flex;
+  flex-direction: column;
 }
 
 .apply-match {
@@ -60,6 +64,20 @@
   box-shadow: 2px 2px 2px 2px lightgray;
 }
 
+.apply-match > h4 {
+  margin: 10px;
+}
+
+.apply-match > span {
+  margin: 10px;
+}
+
+.apply-match > div {
+  margin:  10px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .guestapply-match {
   padding: 5px;
   margin: 5px;
@@ -68,10 +86,46 @@
   box-shadow: 2px 2px 2px 2px lightgray;
 }
 
-.apply-match > h5,.apply-match > p {
+
+.guestapply-match > h4 {
   margin: 10px;
 }
 
-.guestapply-match > h5,.guestapply-match > p {
+ .guestapply-match > div {
+  margin:  10px;
+  display: flex;
+  justify-content: space-between;
+ }
+
+  .guestapply-match > span{
+  margin:  10px;
+ }
+
+ .compliment{
+  padding: 5px;
+  margin: 5px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px lightgray;
+}
+
+.compliment > h4, .disappoint > h4 {
   margin: 10px;
+}
+
+ .disappoint{
+  padding: 5px;
+  margin: 5px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px lightgray;
+}
+
+.cancel-btn {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  border: 0px;
+  width: 80px;
+  font-size: 16px;
 }

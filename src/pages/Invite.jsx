@@ -6,7 +6,7 @@ function Invite({guestInvite, setGuestInvite}) {
 
   const [newTeamName , setNewTeamName] = useState('');
   const [newFieldName , setNewFieldName] = useState('');
-  const [newPeopleCount , setNewPeopleCount] = useState('');
+  const [newMatchTime , setNewMatchTime] = useState('');
   const [newEtc , setNewEtc] = useState('');
 
   return (
@@ -27,9 +27,9 @@ function Invite({guestInvite, setGuestInvite}) {
           }}/>
         </div>
         <div className='input-box'>
-          <p>필요 인원수</p>
-         <input type="text"  placeholder='숫자만 적어주세요' value={newPeopleCount} onChange={(e)=>{
-          setNewPeopleCount(e.target.value)
+          <p>경기 시간</p>
+         <input type="text"  placeholder='ex)17:00~19:00' value={newMatchTime} onChange={(e)=>{
+          setNewMatchTime(e.target.value)
          }}/>
         </div>
         <div className='input-box'>
@@ -45,14 +45,14 @@ function Invite({guestInvite, setGuestInvite}) {
          _guestInvite.push({
           teamName : newTeamName, 
           fieldName : newFieldName, 
-          peopleCount : newPeopleCount, 
+          matchTime : newMatchTime, 
           etc : newEtc
         });
         setGuestInvite(_guestInvite);
         alert('신청이 완료되었습니다.')
         setNewTeamName('');
         setNewFieldName('');
-        setNewPeopleCount('');
+        setNewMatchTime('');
         setNewEtc('');
       }}>모집 신청</button>
     </div>
