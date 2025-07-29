@@ -7,7 +7,6 @@ import { useState } from "react";
 function Detail ({soccerField, selectedSoccerField ,setSelectedSoccerField, setSelectedSlot, selectedSlot}) {
 const{id} = useParams();
 
-const selectedField = soccerField[id];
 const [like, setLike] = useState(0);
 const [tabNumber, setTabNumber] = useState(0);
 const timeSlots = [
@@ -21,11 +20,6 @@ const timeSlots = [
     "22:00~24:00"
   ];
 const [timeIndex, setTimeIndex] = useState();
-
-
-  if(!selectedField) {
-    return <div>해당 구장이 존재하지 않습니다.</div>
-  }
 
 
  return (

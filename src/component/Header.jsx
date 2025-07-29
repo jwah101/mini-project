@@ -26,7 +26,7 @@ function Header () {
         </li>
       </ul>
         <form className="d-flex" role="search">
-          <a className="nav-link active"  style={{cursor:'pointer'}}>로그인</a>
+          <a className="nav-link active"  style={{cursor:'pointer'}} onClick={()=>(navigate('/login'))}>로그인</a>
           <input className="form-control me-4" type="search" placeholder="구장이나 지역으로 찾기" style={{fontSize:"16px"}} aria-label="Search" />
           <button className="btn btn-outline-success" type="submit" style={{width:"100px"}}>찾기</button>
         </form>
