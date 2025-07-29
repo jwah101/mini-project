@@ -11,6 +11,7 @@ import My from './pages/My'
 import Privacy from './pages/Privacy'
 import Policy from './pages/Policy'
 import Footer from './component/Footer'
+import Login from './pages/Login'
 
 function App() {
   const [soccerField, setSoccerField] = useState(data);
@@ -31,6 +32,7 @@ function App() {
           <Route path='/invite' element={<Invite guestInvite={guestInvite} setGuestInvite={setGuestInvite}/>} />
           <Route path='/guest' element={<Guest guestInvite={guestInvite} selectedGuest={selectedGuest} setSelectedGuest={setSelectedGuest} />}/>
           <Route path='/my' element={<My selectedSoccerField={selectedSoccerField} setSelectedSoccerField={setSelectedSoccerField} selectedGuest={selectedGuest} setSelectedGuest={setSelectedGuest} selectedSlot={selectedSlot}/>}/>
+          <Route path='/login' element={<Login />}/>
           <Route path='/policy' element={<Policy/>}/>
           <Route path='/privacy' element={<Privacy/>}/>
         </Routes>
