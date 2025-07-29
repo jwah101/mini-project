@@ -1,20 +1,13 @@
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
+
 function Login () {
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-
-    if (email === '' || password === '') {
-      alert('이메일과 비밀번호를 모두 입력해주세요.');
-    } else {
-      alert(`로그인 완료`);
-    }
-  };
+  const navigate = useNavigate();
 
   return(
     <div className="login-container">
       <h2>⚽ 축구는 인생</h2>
-      <form onSubmit={handleLogin} className="login-form">
+      <form  className="login-form">
         <label>
           이메일
           <input
@@ -33,7 +26,7 @@ function Login () {
         <button className="bt2" type="submit">카카오로 로그인</button>
       </form>
       <p className="register-text">
-        계정이 없으신가요? <a href="/register">회원가입</a>
+        계정이 없으신가요? <span onClick={()=>(navigate('/register'))}>회원가입</span>
       </p>
     </div>
   );
