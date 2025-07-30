@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import './Header.css'
 
-function Header () {
+function Header ({searchData, setSearchData}) {
 
   const navigate = useNavigate();
-  
+
   return(
 
 <nav className="navbar navbar-expand-lg bg-body-tertiary" style={{position:'absolute',position:'fixed', top:0, width:'100%', zIndex:'999'}}>
@@ -25,10 +25,26 @@ function Header () {
           <a className="nav-link active"  onClick={()=>(navigate('/my'))} style={{cursor:'pointer'}}>😀MY</a>
         </li>
       </ul>
-        <form className="d-flex" role="search">
+        <form className="d-flex" role="search" >
           <a className="nav-link active"  style={{cursor:'pointer'}} onClick={()=>(navigate('/login'))}>로그인</a>
-          <input className="form-control me-4" type="search" placeholder="구장이나 지역으로 찾기" style={{fontSize:"16px"}} aria-label="Search" />
-          <button className="btn btn-outline-success" type="submit" style={{width:"100px"}}>찾기</button>
+          <input className="form-control me-4" 
+            type="search" 
+            placeholder="구장이나 지역으로 찾기" 
+            style={{fontSize:"16px"}} 
+            aria-label="Search" 
+            value={searchData}
+            onChange={(e)=>{
+            setSearchData(e.target.value)
+          }}
+          />
+          <button 
+            className="btn btn-outline-success" 
+            type="submit" 
+            style={{width:"100px"}}
+            onClick={(e)=>{
+            e.preventDefault();
+            navigate('/search')}}
+            >찾기</button>
         </form>
     </div>
   </div>

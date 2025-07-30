@@ -4,7 +4,7 @@ function Guest ({guestInvite, selectedGuest, setSelectedGuest}) {
 
   
   return(
-    <Table style={{textAlign:'center' , marginTop:'80px'}}>
+    <Table style={{textAlign:'center' , marginTop:'80px', minHeight:'800px'}}>
       <thead>
         <tr>
           <th>팀 이름</th>
