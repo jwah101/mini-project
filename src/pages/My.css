@@ -62,6 +62,7 @@
   background-color: whitesmoke;
   border-radius: 5px;
   box-shadow: 2px 2px 2px 2px lightgray;
+
 }
 
 .apply-match > h4 {
@@ -72,12 +73,18 @@
   margin: 10px;
 }
 
-.apply-match > div {
-  margin:  10px;
+.select-match {
+  font-weight: 600;
+  font-size: 12px;
+  margin:  5px;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+.match-inner {
   display: flex;
   justify-content: space-between;
 }
-
 .guestapply-match {
   padding: 5px;
   margin: 5px;
@@ -93,8 +100,6 @@
 
  .guestapply-match > div {
   margin:  10px;
-  display: flex;
-  justify-content: space-between;
  }
 
   .guestapply-match > span{
@@ -122,6 +127,7 @@
 }
 
 .cancel-btn {
+  margin-left: auto;
   background-color: blue;
   color: white;
   border-radius: 5px;

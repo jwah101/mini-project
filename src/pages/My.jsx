@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Compliment from '../component/Compliment';
 import Disappoint from '../component/Disappoint';
 
-function My ({selectedSoccerField, setSelectedSoccerField, selectedGuest, setSelectedGuest, selectedSlot}) {
+function My ({selectedSoccerField, setSelectedSoccerField, selectedGuest, setSelectedGuest, selectedSlot, selectedDate}) {
   const [tabNumber, setTabNumber] = useState(0);
   const navigate = useNavigate();
 
@@ -56,17 +56,20 @@ function My ({selectedSoccerField, setSelectedSoccerField, selectedGuest, setSel
                 selectedSoccerField.map((data, i)=>{
                   const slot = selectedSlot[i]
                   return(
-                    <div key={i}>
-                      <span style={{cursor:'pointer'}} onClick={()=>{
-                      navigate('/detail/'+ data.soccerField.id)}}>
-                        구장명 : {data.soccerField.name}</span>
-                      <span>시간 : {slot.selectedTime}</span>
-                      <button className='cancel-btn' onClick={()=>{
-                        let _selectedSoccerField = [...selectedSoccerField]
-                        _selectedSoccerField.splice(i,1)
-                        setSelectedSoccerField(_selectedSoccerField)
-                        alert('취소 완료되었습니다.')
-                      }}>취소</button>
+                    <div className='select-match' key={i}>
+                      <div><p>{selectedDate.month+1}월 {selectedDate.date}일 {selectedDate.dayLabel}요일 {slot.selectedTime}</p></div>
+                      <div className='match-inner'>
+                        <span style={{cursor:'pointer'}} onClick={()=>{
+                        navigate('/detail/'+ data.soccerField.id)}}>
+                        {data.soccerField.name}</span>
+
+                         <span> <button className='cancel-btn' onClick={()=>{
+                          let _selectedSoccerField = [...selectedSoccerField]
+                          _selectedSoccerField.splice(i,1)
+                          setSelectedSoccerField(_selectedSoccerField)
+                          alert('취소 완료되었습니다.')
+                          }}>취소</button></span>
+                        </div>
                     </div>
                   )
                 })
@@ -82,15 +85,17 @@ function My ({selectedSoccerField, setSelectedSoccerField, selectedGuest, setSel
                {selectedGuest.length > 0 ?(
                 selectedGuest.map((data, i)=>{
                   return(
-                    <div key={i}>
-                      <span>구장 명 : {data.soccerField}</span>
-                      <span> 시간 : {data.matchTime}</span>
-                      <button className='cancel-btn' onClick={()=>{
-                        let _selectedGuest = [...selectedGuest]
-                        _selectedGuest.splice(i,1)
-                        setSelectedGuest(_selectedGuest)
-                        alert('취소 완료되었습니다.')
-                      }}>취소</button>
+                    <div className='select-match' key={i}>
+                      <div><p>{data.matchTime}</p></div>
+                      <div className='match-inner'>
+                        <span>{data.soccerField}</span>
+                        <span><button className='cancel-btn' onClick={()=>{
+                          let _selectedGuest = [...selectedGuest]
+                          _selectedGuest.splice(i,1)
+                          setSelectedGuest(_selectedGuest)
+                          alert('취소 완료되었습니다.')
+                        }}>취소</button></span>
+                      </div>
                     </div>
                     
                   )
@@ -103,11 +108,11 @@ function My ({selectedSoccerField, setSelectedSoccerField, selectedGuest, setSel
             </div>
             <div className='compliment'>
               <h4>😀칭찬해요</h4>
-              <p><Compliment /></p>
+              <Compliment />
             </div>
             <div className='disappoint'>
-                <h4>😥아쉬워요</h4>
-                <p><Disappoint /></p>
+              <h4>😥아쉬워요</h4>
+              <Disappoint />
             </div>
          </div>
     </div>

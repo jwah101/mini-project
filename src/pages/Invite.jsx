@@ -28,7 +28,7 @@ function Invite({guestInvite, setGuestInvite}) {
         </div>
         <div className='input-box'>
           <p>경기 시간</p>
-         <input type="text"  placeholder='ex)17:00~19:00' value={newMatchTime} onChange={(e)=>{
+         <input type="text"  placeholder='ex)13일 금요일 17:00~19:00' value={newMatchTime} onChange={(e)=>{
           setNewMatchTime(e.target.value)
          }}/>
         </div>

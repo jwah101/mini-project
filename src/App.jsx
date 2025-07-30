@@ -16,7 +16,20 @@ import Register from './pages/Register'
 import Introduce from './pages/Introduce'
 import Search from './pages/Search'
 
+
+
+  const dayLabels = ['일', '월', '화', '수', '목', '금', '토'];
+  function getTodayDate() {
+  const now = new Date();
+  return {
+     month: now.getMonth(),
+     date: now.getDate(),
+    dayLabel: dayLabels[now.getDay()]
+  };
+  }
+
 function App() {
+
   const [soccerField, setSoccerField] = useState(data);
   const [guestInvite, setGuestInvite] = useState([]);
   const [selectedSoccerField, setSelectedSoccerField] = useState([]);
@@ -24,17 +37,23 @@ function App() {
     // 시간 선택시 변동 스테이트
   const [selectedSlot, setSelectedSlot] = useState([]);
   const [searchData, setSearchData] = useState("");
+  const [dateIndex , setDateIndex] = useState(0);
+  const [selectedDate , setSelectedDate] = useState(getTodayDate());
+  
+
+
+  console.log(selectedDate)
   return (
     <div className='App'>
       <Header soccerField={soccerField}  searchData={searchData} setSearchData={setSearchData} />
       <div className='MainContent'>
         <Routes>
-          <Route path='/' element = {<MainPage soccerField={soccerField} />}/>
+          <Route path='/' element = {<MainPage soccerField={soccerField} dateIndex={dateIndex} setDateIndex={setDateIndex} selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>}/>
           <Route path='/search' element = {<Search searchData={searchData} soccerField={soccerField}/>}/>
-          <Route path='/detail/:id' element={<Detail soccerField={soccerField} setSelectedSoccerField={setSelectedSoccerField} selectedSoccerField={selectedSoccerField} selectedSlot={selectedSlot} setSelectedSlot={setSelectedSlot}/>}/>
+          <Route path='/detail/:id' element={<Detail soccerField={soccerField} setSelectedSoccerField={setSelectedSoccerField} selectedSoccerField={selectedSoccerField} selectedSlot={selectedSlot} setSelectedSlot={setSelectedSlot} selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>}/>
           <Route path='/invite' element={<Invite guestInvite={guestInvite} setGuestInvite={setGuestInvite}/>} />
           <Route path='/guest' element={<Guest guestInvite={guestInvite} selectedGuest={selectedGuest} setSelectedGuest={setSelectedGuest} />}/>
-          <Route path='/my' element={<My selectedSoccerField={selectedSoccerField} setSelectedSoccerField={setSelectedSoccerField} selectedGuest={selectedGuest} setSelectedGuest={setSelectedGuest} selectedSlot={selectedSlot}/>}/>
+          <Route path='/my' element={<My selectedSoccerField={selectedSoccerField} setSelectedSoccerField={setSelectedSoccerField} selectedGuest={selectedGuest} setSelectedGuest={setSelectedGuest} selectedSlot={selectedSlot} selectedDate={selectedDate}/>}/>
           <Route path='/login' element={<Login />}/>
           <Route path='/register' element={<Register />}/>
           <Route path='/policy' element={<Policy/>}/>
