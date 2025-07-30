@@ -7,7 +7,7 @@ function Header ({searchData, setSearchData}) {
 
   return(
 
-<nav className="navbar navbar-expand-lg bg-body-tertiary" style={{position:'absolute',position:'fixed', top:0, width:'100%', zIndex:'999'}}>
+<nav className="navbar navbar-expand-lg bg-body-tertiary" style={{position:'fixed', top:0, width:'100%', zIndex:999}}>
   <div className="container-fluid">
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
