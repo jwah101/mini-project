@@ -1,4 +1,4 @@
-import './Carousel.css'
+import './carousel.css'
 function Carousel () {
   return(
     <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
