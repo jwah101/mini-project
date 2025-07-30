@@ -6,17 +6,12 @@
 
 
 .container {
-  width: 1000px;
+  max-width: 1000px;
+  width: 100%;
+  margin-bottom: 60px;
 }
 
-.right-menu {
-  background-color: whitesmoke;
-  padding: 15px;
-  width: 40%;
-  margin-top: 10px;
-  height: 400px;
-  line-height: 60px;
-}
+
 .left-menu {
   background-color: whitesmoke;
   width: 58%;
@@ -25,6 +20,9 @@
   margin-left: -1px;
   padding: 5px;
   flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px lightgray;
+  height: 100%;
 }
 
 .left-menu .tabs {
@@ -38,13 +36,23 @@
   cursor: pointer;
   border-radius: 5px;
   display: flex;
+  margin-top: 20px;
 }
 .left-menu .tab-content {
-margin-top: 20px;
-margin: 5px;
-padding: 5px;
+  margin-top: 20px;
+  padding: 5px;
 }
 
+.right-menu {
+  background-color: whitesmoke;
+  padding: 15px;
+  width: 40%;
+  margin-top: 10px;
+  height: 100%;
+  line-height: 40px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px lightgray;
+}
 
 .right-menu .content {
   margin-top: 10px;
@@ -58,7 +66,7 @@ padding: 5px;
   padding: 5px;
   width: 120px;
   font-size: 20px;
-  margin-top: 25%;
+  margin-top: 30%;
 }
 .btn2{
   background-color: whitesmoke;
@@ -73,4 +81,23 @@ padding: 5px;
   padding: 5px;
   width: 60px;
   font-size: 16px;
+}
+
+
+.apply-time {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  cursor: pointer;
+}
+
+.time-slot {
+  border-radius: 5px;
+  transition: 0.3s;
+  padding: 5px;
+  text-align: center;
+}
+
+.time-slot.selected {
+  background-color: #007bff;
+  color: white;
 }

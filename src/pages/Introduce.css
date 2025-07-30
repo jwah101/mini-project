@@ -1,0 +1,46 @@
+.introduce-container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: sans-serif;
+  line-height: 1.6;
+  margin-top: 80px;
+}
+
+.introduce-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.introduce-container h2 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  color: #333;
+}
+
+.introduce-container ul,
+.introduce-container ol {
+  margin-left: 1.5rem;
+  padding-left: 1rem;
+}
+
+.introducet-container li {
+  margin-bottom: 0.5rem;
+}
+
+.introduce-container p {
+  margin: 0.5rem 0;
+}
+.introduce-container footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+}

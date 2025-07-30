@@ -1,0 +1,17 @@
+.navbar-brand {
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.d-flex > a{
+  width: 100px;
+}
+
+.d-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

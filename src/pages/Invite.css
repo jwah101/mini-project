@@ -1,6 +1,7 @@
 
 .Invite{
-  width: 500px;
+  max-width: 400px;
+  width: 100%;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -10,6 +11,7 @@
   padding: 20px;
   box-shadow: 2px 2px 2px 2px gray;
   margin-top: 100px;
+  margin-bottom: 50px;
 }
 
 .Invite .input-box > p{

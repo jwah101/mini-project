@@ -1,32 +1,29 @@
 .My {
   margin-top: 100px;
-  width: 1000px;
+  max-width : 1000px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .My .left-menu {
   width: 40%;
-  height: 1000px;
+  height: 100%;
   padding: 10px;
   margin: 5px;
   background-color: whitesmoke;
   display: flex;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px lightgray;
 }
 .left-menu .info {
   display: flex;
   justify-content: space-between
 }
 
-.My .right-menu {
-  width: 60%;
-  height: 100px;
-  padding: 5px;
-  margin: 5px;
-  background-color: whitesmoke;
-}
 
 .My .left-menu .manner, .level {
   width: 48%;
@@ -37,7 +34,98 @@
   font-size: 20px;
 }
 
-.My .levelguide {
+.My .levelguide >h4 {
   padding: 5px;
   margin-top: 20px;
+  text-align: center;
+}
+
+.My .levelguide .tabs .tab {
+  padding: 5px;
+  margin: 10px;
+}
+
+.My .levelcontent {
+  padding: 5px;
+  margin: 10px;
+}
+
+.match-list {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.apply-match {
+  padding: 5px;
+  margin: 5px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px lightgray;
+}
+
+.apply-match > h4 {
+  margin: 10px;
+}
+
+.apply-match > span {
+  margin: 10px;
+}
+
+.apply-match > div {
+  margin:  10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.guestapply-match {
+  padding: 5px;
+  margin: 5px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px lightgray;
+}
+
+
+.guestapply-match > h4 {
+  margin: 10px;
+}
+
+ .guestapply-match > div {
+  margin:  10px;
+  display: flex;
+  justify-content: space-between;
+ }
+
+  .guestapply-match > span{
+  margin:  10px;
+ }
+
+ .compliment{
+  padding: 5px;
+  margin: 5px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px lightgray;
+}
+
+.compliment > h4, .disappoint > h4 {
+  margin: 10px;
+}
+
+ .disappoint{
+  padding: 5px;
+  margin: 5px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px lightgray;
+}
+
+.cancel-btn {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  border: 0px;
+  width: 80px;
+  font-size: 16px;
 }
