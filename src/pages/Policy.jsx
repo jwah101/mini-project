@@ -1,6 +1,6 @@
 function Policy () {
   return (
-    <div style={{maxWidth:"1000px", width:'100%', margin:'auto', marginTop:'80px', marginBottom:'60px'}}>
+    <div style={{maxWidth:"800px", width:'100%', margin:'auto', marginTop:'80px', marginBottom:'60px'}}>
       <h1>서비스 이용약관 </h1><br />
 
       <h4>제 1조 (목적)<br /></h4>
