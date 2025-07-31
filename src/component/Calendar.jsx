@@ -9,7 +9,7 @@ function Calendar ({dateIndex, setDateIndex, selectedDate, setSelectedDate}) {
     const now = new Date();
     return new Date(now.getFullYear(), now.getMonth(), now.getDate());
   }
-  //하루 단위 이동하기
+  //하루 단위 이동하기 -> moveDay(direction) -> direction-> -1,+1
   const moveDay = (direction)=>{
     const newStart = new Date(startDate);
     newStart.setDate(startDate.getDate() + direction)

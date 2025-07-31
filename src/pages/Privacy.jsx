@@ -1,6 +1,6 @@
 function Privacy () {
   return(
-  <div style={{maxWidth:"1000px", width:'100%', margin:'auto', marginTop:'80px', marginBottom:'60px'}}>
+  <div style={{maxWidth:"800px", width:'100%', margin:'auto', marginTop:'80px', marginBottom:'60px'}}>
       <h1>개인정보의 처리목적, 수집 항목, 보유 및 이용기간</h1> <br />
 
       <h4>개인정보 제3자 제공 및 공유</h4>
