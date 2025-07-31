@@ -4,7 +4,7 @@ import TabContent from "../component/TabContent";
 import { useState } from "react";
 
 
-function Detail ({soccerField, selectedSoccerField ,setSelectedSoccerField, setSelectedSlot, selectedSlot}) {
+function Detail ({soccerField, selectedSoccerField ,setSelectedSoccerField, setSelectedSlot, selectedSlot, selectedDate, setSelectedDate}) {
 const{id} = useParams();
 
 const [like, setLike] = useState(0);
@@ -47,6 +47,7 @@ const [timeIndex, setTimeIndex] = useState();
 
       <div className="right-menu">
           <div className="content">
+            <p><b>{selectedDate.month+1}월 {selectedDate.date}일 {selectedDate.dayLabel}요일</b></p>
             <h4>{soccerField[id].name}</h4>
             <p>{'주소 : '+soccerField[id].address}</p>
             <p>{'가격: '+soccerField[id].price+'원'}</p>
@@ -77,7 +78,12 @@ const [timeIndex, setTimeIndex] = useState();
             }
             let _selectedSoccerField = [...selectedSoccerField]
             _selectedSoccerField.push({
-              soccerField : soccerField[id]
+              soccerField : soccerField[id],
+                reservedDate: {
+                  month: selectedDate.month,
+                  date: selectedDate.date,
+                  dayLabel: selectedDate.dayLabel
+               }
             })
             let _selectedSlot = [...selectedSlot]
             _selectedSlot.push({

@@ -16,8 +16,7 @@ function Compliment () {
         {
           list.map((data,i)=>{
             return(
-              <>
-              <div style={{margin:'5px', padding:'10px', borderBottom : '1px solid lightgray', display:'flex', justifyContent:'space-between'}} key={i}>
+              <div key={i} style={{margin:'5px', padding:'10px', borderBottom : '1px solid lightgray', display:'flex', justifyContent:'space-between'}}>
                 {data.content}
                 <span style={{cursor:'pointer'}} onClick={()=>{
                   let _list = [...list]
@@ -25,7 +24,6 @@ function Compliment () {
                   setList(_list);
                 }}>👍{data.count}</span>
               </div>
-            </>
             )
           })
         }

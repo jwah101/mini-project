@@ -1,0 +1,40 @@
+.calendar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #3366cc;
+  cursor: pointer;
+}
+
+.date-grid {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.day {
+  text-align: center;
+  font-size: 14px;
+  min-width: 30px;
+}
+
+.saturday {
+  color: blue;
+}
+
+.sunday {
+  color: red;
+}
+
+.day-selected {
+  background-color: #007bff;
+  color: white;
+}
