@@ -78,7 +78,12 @@ const [timeIndex, setTimeIndex] = useState();
             }
             let _selectedSoccerField = [...selectedSoccerField]
             _selectedSoccerField.push({
-              soccerField : soccerField[id]
+              soccerField : soccerField[id],
+                reservedDate: {
+                  month: selectedDate.month,
+                  date: selectedDate.date,
+                  dayLabel: selectedDate.dayLabel
+               }
             })
             let _selectedSlot = [...selectedSlot]
             _selectedSlot.push({

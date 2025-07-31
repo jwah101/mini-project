@@ -22,8 +22,8 @@ import Search from './pages/Search'
   function getTodayDate() {
   const now = new Date();
   return {
-     month: now.getMonth(),
-     date: now.getDate(),
+    month: now.getMonth(),
+    date: now.getDate(),
     dayLabel: dayLabels[now.getDay()]
   };
   }
@@ -40,9 +40,6 @@ function App() {
   const [dateIndex , setDateIndex] = useState(0);
   const [selectedDate , setSelectedDate] = useState(getTodayDate());
   
-
-
-  console.log(selectedDate)
   return (
     <div className='App'>
       <Header soccerField={soccerField}  searchData={searchData} setSearchData={setSearchData} />

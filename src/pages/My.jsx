@@ -57,7 +57,7 @@ function My ({selectedSoccerField, setSelectedSoccerField, selectedGuest, setSel
                   const slot = selectedSlot[i]
                   return(
                     <div className='select-match' key={i}>
-                      <div><p>{selectedDate.month+1}월 {selectedDate.date}일 {selectedDate.dayLabel}요일 {slot.selectedTime}</p></div>
+                      <div><p>{data.reservedDate.month+1}월 {data.reservedDate.date}일 {data.reservedDate.dayLabel}요일 {slot.selectedTime}</p></div>
                       <div className='match-inner'>
                         <span style={{cursor:'pointer'}} onClick={()=>{
                         navigate('/detail/'+ data.soccerField.id)}}>
@@ -107,7 +107,7 @@ function My ({selectedSoccerField, setSelectedSoccerField, selectedGuest, setSel
             }
             </div>
             <div className='compliment'>
-              <h4>😀칭찬해요</h4>
+              <h4>😊칭찬해요</h4>
               <Compliment />
             </div>
             <div className='disappoint'>
