@@ -4,7 +4,7 @@ function Carousel () {
     <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src="/bg/1.PNG" className="d-block w-100" alt="1"/>
+          <img src="/bg/1.PNG" className="d-block w-100 active"  alt="1"/>
         </div>
         <div className="carousel-item">
           <img src="/bg/2.png" className="d-block w-100" alt="2"/>
