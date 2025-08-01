@@ -3,7 +3,7 @@ import './Calendar.css'
 
 function Calendar ({dateIndex, setDateIndex, selectedDate, setSelectedDate}) {
   const [startDate , setStartDate] = useState(getTodayStart());
-
+  const dayLabels = ['일', '월', '화', '수', '목', '금', '토'];
   // 시작날짜 셋팅
   function getTodayStart() {
     const now = new Date();
@@ -14,18 +14,28 @@ function Calendar ({dateIndex, setDateIndex, selectedDate, setSelectedDate}) {
     const newStart = new Date(startDate);
     newStart.setDate(startDate.getDate() + direction)
     setStartDate(newStart);
+    // 무브 데이 실행시 날짜 자동으로 값 이동
+    if (selectedDate) {
+      const selected = new Date(new Date().getFullYear(), selectedDate.month, selectedDate.date);
+      selected.setDate(selected.getDate() + direction);
+      setSelectedDate({
+        month: selected.getMonth(),
+        date: selected.getDate(),
+        dayLabel: dayLabels[selected.getDay()]
+      });
+    }
   };
-    const getWeekDates = () => {
-      const week = [];
-      for (let i = 0; i < 7; i++) {
-        const day = new Date(startDate);
-        day.setDate(startDate.getDate() + i);
-        week.push(day);
-      }
-      return week;
-    };
 
-  const dayLabels = ['일', '월', '화', '수', '목', '금', '토'];
+const getWeekDates = () => {
+  const week = [];
+  for (let i = 0; i < 7; i++) {
+    const day = new Date(startDate);
+    day.setDate(startDate.getDate() + i);
+    week.push(day);
+  }
+  return week;
+};
+
   const weekDates = getWeekDates();
 
 
@@ -38,7 +48,8 @@ function Calendar ({dateIndex, setDateIndex, selectedDate, setSelectedDate}) {
           const isSaturday = date.getDay() === 6;
           return (
             <div
-              key={i} style={{cursor:'pointer'}} onClick={()=>{
+              key={i} style={{cursor:'pointer'}} 
+               onClick={()=>{
                 setDateIndex(i)
                 setSelectedDate(
                  {
