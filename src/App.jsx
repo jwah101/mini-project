@@ -1,8 +1,8 @@
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import './App.css'
 import Header from './component/Header'
 import MainPage from './pages/MainPage'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import data from './mokData';
 import Detail from './pages/Detail'
 import Invite from './pages/Invite'
@@ -16,8 +16,6 @@ import Register from './pages/Register'
 import Introduce from './pages/Introduce'
 import Search from './pages/Search'
 
-
-
   const dayLabels = ['일', '월', '화', '수', '목', '금', '토'];
   function getTodayDate() {
   const now = new Date();
@@ -29,7 +27,6 @@ import Search from './pages/Search'
   }
 
 function App() {
-
   const [soccerField, setSoccerField] = useState(data);
   const [guestInvite, setGuestInvite] = useState([]);
   const [selectedSoccerField, setSelectedSoccerField] = useState([]);
@@ -39,7 +36,15 @@ function App() {
   const [searchData, setSearchData] = useState("");
   const [dateIndex , setDateIndex] = useState(0);
   const [selectedDate , setSelectedDate] = useState(getTodayDate());
-  
+  // 메인페이지 들어올 시 셀렉트 데이트 초기화
+  const location = useLocation();
+  useEffect(()=>{
+    if(location.pathname==='/'){
+      setSelectedDate(getTodayDate()); // 날짜 초기화
+      setDateIndex(0); // 인덱스 초기화
+    }
+  },[location.pathname]);
+
   return (
     <div className='App'>
       <Header soccerField={soccerField}  searchData={searchData} setSearchData={setSearchData} />
