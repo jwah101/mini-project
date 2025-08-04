@@ -16,7 +16,7 @@ function My ({selectedSoccerField, setSelectedSoccerField, selectedGuest, setSel
     <div className="My">
       <div className="left-menu">
         <h2>홍길동</h2>
-        <div className='select-position'>
+        {/* <div className='select-position'>
           <h5>선호 포지션</h5> 
           <select name="position" id="" onChange={(e)=>{
             setPosition(e.target.value);
@@ -29,7 +29,7 @@ function My ({selectedSoccerField, setSelectedSoccerField, selectedGuest, setSel
           <button onClick={()=>{
             alert('선호 포지션이 변경되었습니다.')
           }}>저장</button>
-        </div>
+        </div> */}
         <div className='info'>
           <div className='manner'>
             <p>매너</p>
